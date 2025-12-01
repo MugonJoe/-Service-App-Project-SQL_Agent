@@ -64,10 +64,13 @@ LLM 평가자를 통해 자동 채점함.
 ## 3. 시스템 흐름 (Workflow)
 
 [User Question]
+
 ↓
 [first_tool_call] — 테이블 목록 조회
+
 ↓
 [list_tables_tool]
+
 ↓
 [model_get_schema] — 관련 테이블 추론
 ↓
