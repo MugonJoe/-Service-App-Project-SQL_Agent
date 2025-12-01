@@ -66,25 +66,41 @@ LLM 평가자를 통해 자동 채점함.
 [User Question]
 
 ↓
+
 [first_tool_call] — 테이블 목록 조회
 
 ↓
+
 [list_tables_tool]
 
 ↓
+
 [model_get_schema] — 관련 테이블 추론
+
 ↓
+
 [get_schema_tool] — DDL 조회
+
 ↓
+
 [query_gen] — SQL 생성/해석
+
 ├─ Error → query_gen (재생성)
+
 ├─ SQL → correct_query
+
 └─ Answer → END
+
 ↓
+
 [correct_query] — Query Checker
+
 ↓
+
 [execute_query] — 실제 DB 실행
+
 ↓
+
 (결과를 다시 query_gen으로 전달)
 
 <img width="418" height="744" alt="image" src="https://github.com/user-attachments/assets/fa9400cf-d204-43bc-8cc6-424d2e4b006a" />
